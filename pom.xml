@@ -13,6 +13,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<jackson-2-version>2.8.11</jackson-2-version>
+		<poi-version>3.9</poi-version>
 	</properties>
 
 	<dependencies>
@@ -44,23 +45,47 @@
 		</dependency>
 
 		<!-- smile (binary JSON). Other artifacts in this group do other formats. -->
-<!-- 		<dependency> -->
-<!-- 			<groupId>com.fasterxml.jackson.dataformat</groupId> -->
-<!-- 			<artifactId>jackson-dataformat-smile</artifactId> -->
-<!-- 			<version>${jackson-2-version}</version> -->
-<!-- 		</dependency> -->
+		<!-- <dependency> -->
+		<!-- <groupId>com.fasterxml.jackson.dataformat</groupId> -->
+		<!-- <artifactId>jackson-dataformat-smile</artifactId> -->
+		<!-- <version>${jackson-2-version}</version> -->
+		<!-- </dependency> -->
 		<!-- JAX-RS provider -->
-<!-- 		<dependency> -->
-<!-- 			<groupId>com.fasterxml.jackson.jaxrs</groupId> -->
-<!-- 			<artifactId>jackson-jaxrs-json-provider</artifactId> -->
-<!-- 			<version>${jackson-2-version}</version> -->
-<!-- 		</dependency> -->
+		<!-- <dependency> -->
+		<!-- <groupId>com.fasterxml.jackson.jaxrs</groupId> -->
+		<!-- <artifactId>jackson-jaxrs-json-provider</artifactId> -->
+		<!-- <version>${jackson-2-version}</version> -->
+		<!-- </dependency> -->
 		<!-- Support for JAX-B annotations as additional configuration -->
-<!-- 		<dependency> -->
-<!-- 			<groupId>com.fasterxml.jackson.module</groupId> -->
-<!-- 			<artifactId>jackson-module-jaxb-annotations</artifactId> -->
-<!-- 			<version>${jackson-2-version}</version> -->
-<!-- 		</dependency> -->
+		<!-- <dependency> -->
+		<!-- <groupId>com.fasterxml.jackson.module</groupId> -->
+		<!-- <artifactId>jackson-module-jaxb-annotations</artifactId> -->
+		<!-- <version>${jackson-2-version}</version> -->
+		<!-- </dependency> -->
+
+		<!-- poi beging -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>${poi-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>${poi-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml-schemas</artifactId>
+			<version>${poi-version}</version>
+		</dependency>
+		<!-- poi end -->
+
+		<dependency>
+			<groupId>com.microsoft.sqlserver</groupId>
+			<artifactId>mssql-jdbc</artifactId>
+			<version>6.2.1.jre8</version>
+		</dependency>
 	</dependencies>
 
 	<build>
