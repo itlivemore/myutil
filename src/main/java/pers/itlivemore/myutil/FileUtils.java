@@ -6,6 +6,7 @@ import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -123,6 +124,27 @@ public class FileUtils {
 		// 如果为window系统下,则把路径中的路径分隔符替换为window系统的文件路径分隔符
 		filePath = filePath.replace("/", filePathSeparator);
 		return filePath;
+	}
+
+	/**
+	 * 
+	 * @Title: getStringFromFilePath
+	 * @Description: 读取文件
+	 * @param filePath
+	 * @return List<String>
+	 * @throws @Author
+	 *             laigc
+	 * @Date 2018年11月19日 下午3:31:35
+	 */
+	public static List<String> getAllLineFromFilePath(String filePath) {
+		List<String> resultList = new ArrayList<>();
+		try {
+			Path file = Paths.get(filePath);
+			resultList = Files.readAllLines(file);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return resultList;
 	}
 
 }
