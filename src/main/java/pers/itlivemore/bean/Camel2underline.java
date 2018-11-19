@@ -19,7 +19,7 @@ import pers.itlivemore.myutil.FileUtils;
 public class Camel2underline {
 	public static void main(String[] args) {
 		String filePath = "/bean/camel2underline.txt";
-		List<String> allLines = FileUtils.gerClassPathResourceAllLine(filePath);
+		List<String> allLines = FileUtils.getClassPathResourceAllLine(filePath);
 		if (allLines == null) {
 			return;
 		}

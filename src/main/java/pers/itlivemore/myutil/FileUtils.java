@@ -38,7 +38,7 @@ public class FileUtils {
 	 *             itlivemore
 	 * @Date 2018年2月24日 上午11:13:53
 	 */
-	public static List<String> gerClassPathResourceAllLine(String filePath) {
+	public static List<String> getClassPathResourceAllLine(String filePath) {
 		List<String> readAllLines = null;
 		try {
 			URL url = FileUtils.class.getResource(filePath);
