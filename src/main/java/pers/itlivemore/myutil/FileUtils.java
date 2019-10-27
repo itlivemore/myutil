@@ -77,8 +77,9 @@ public class FileUtils {
 		if (type.equals(1)) {
 			// type=1，处理成原始路径，即未编译后的路径
 			// 项目根路径
-			String projectRootPath = System.getProperty("user.dir");
-
+            String projectRootPath = FileUtils.class.getClassLoader().getResource("").getPath();
+            projectRootPath = projectRootPath.replace("/target/classes/", "");
+			
 			// 是否是在test包下，maven项目java源文件在src\main\java或是src\test\java下
 			boolean isTestPackage = false;
 			// 当前类编译后路径
